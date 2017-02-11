@@ -42,27 +42,22 @@ The goals / steps of this project are the following:
 Drive.py is the stimulator for the model to drive the car around the track.. Takes the image from the simulator and feeds to the model to get the desired output steering angle, and then processes the desired steering and throttle values to drive the
 car in the simulator.
 
-Usage of `drive.py` requires the saved the trained model as an h5 file, and then used with the model using this command:
+Usage of `drive.py` requires the saved the trained model as an .json file, and then used with the model using this command:
 
 ```sh
-python drive.py model.h5
+python drive.py model.json
 ```
 
 The above command will load the trained model and use the model to make predictions on individual images in real-time and send the predicted angle back to the server via a websocket connection.
 
+### `model.jon`
 
-### `video.py`
+model.json is the model used by Drive.py to drive the car around the track.. Created by the Jupyter note book, 'Behavioral-cloning-P3-Submit.ipynb' after training using the images. 
 
-```sh
-python video.py run1
-```
+### `model.h5`
 
-Create a video based on images found in the `run1` directory. The name of the video will be name of the directory following by `'.mp4'`, so, in this case the video will be `run1.mp4`.
+model.h5 is the file containg the weights for the model used by Drive.py to drive the car around the track.. Created by the Jupyter note book, 'Behavioral-cloning-P3-Submit.ipynb' after training using the images. 
 
-Optionally one can specify the FPS (frames per second) of the video:
+### `Behavioral-cloning-P3-Submit.ipynb`
 
-```sh
-python video.py run1 --fps 48
-```
-
-The video will run at 48 FPS. The default FPS is 60.
+Jupyter note book, containing the actual code for training and generating the model and the weights.
