@@ -76,7 +76,7 @@ For details about how I created the training data, see the next section.
 
 ####1. Solution Design Approach
 
-The overall strategy for deriving a model architecture was to ...
+The overall strategy for deriving a model architecture was to get the car to drive around the track 1 w/o overfitting. 
 
 My first step was to use a convolution neural network model similar to the one in an article by nVidia. http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf.  But having worked on it for close to a week and not finding a good solution, I switched to a CNN model described in another paper by Vivek Yadav, in https://chatbotslife.com/using-augmentation-to-mimic-human-driving-496b569760a9#.1g3gw99kj... This model immediately started yielding the results I was struggling to get initially.  This model uses a set of filters and convolutional networks, maxpooling, drop of layers and finally fully connected laters. The first layer is 3 1X1 filter, which has the effect of transforming the color space of the images. Using 3 1X1 filters allows the model to choose its best color space. This is followed by 3 convolutional blocks each comprised of 32, 64 and 128 filters of size 3X3. These convolution layers were followed by 3 fully connected layers. All the convolution blocks and the 2 following fully connected layers had exponential relu (ELU) as activation function. 
 
@@ -126,3 +126,5 @@ I finally randomly shuffled the data set and put 25% of the data into a validati
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5 as more number of epochs did not yield any better results. I used an adam optimizer with a learning rate of 0.0001.
 
 I had recorded the video to submit, but the process of recording had a big impact on the simulator performance (too much swaggering altho' the car did not go off the track) due to the additional demand on the processing and the memory needs on my machine. Running the simulator w/o recording looks much better. 
+
+Surprisingly, the car behaved very well on track 2 (much better than track 1) and stayed on course all the time. There were a couple of slopes were the car struggled and started reversing, and so added fail-safe code in drive.py to increase the speed under such conditions. The car behaved very well after that. Have added the video for the same.
