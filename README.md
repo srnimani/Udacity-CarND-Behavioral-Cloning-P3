@@ -24,7 +24,7 @@ Modified original Drive.py to control the speed and steering control to smoothen
 
 Latest simulator data track 2 does not work, I guess due to lane lines and very difficult terrian. Needs some more work.
 
-Used Jupyter Notework
+Used Jupyter Notebook
 
 The Project
 ---
