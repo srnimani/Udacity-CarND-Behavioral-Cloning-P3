@@ -64,7 +64,7 @@ The model was trained and validated on different data sets to ensure that the mo
 
 ####3. Model parameter tuning
 
-The model used an adam optimizer, so the learning rate was not tuned manually (model.py lines 170-173).
+The model used an adam optimizer, with a learning rate of 0.0001 (model.py lines 170-173).
 
 ####4. Appropriate training data
 
@@ -78,7 +78,7 @@ For details about how I created the training data, see the next section.
 
 The overall strategy for deriving a model architecture was to ...
 
-My first step was to use a convolution neural network model similar to the one in an article by nVidia. http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf.  But having worked on it for close to a week and not finding a good solution, I switched a model described in another paper by Vivek Yada, in https://chatbotslife.com/using-augmentation-to-mimic-human-driving-496b569760a9#.1g3gw99kj... This model immediately started yielding the results I was struggling to get initially.  This model uses a set of filters and convolutional netwroks, maxpooling, drop of layers and finally fully connected laters. The first layer is 3 1X1 filter, which has the effect of transforming the color space of the images. Using 3 1X1 filters allows the model to choose its best color space. This is followed by 3 convolutional blocks each comprised of 32, 64 and 128 filters of size 3X3. These convolution layers were followed by 3 fully connected layers. All the convolution blocks and the 2 following fully connected layers had exponential relu (ELU) as activation function. 
+My first step was to use a convolution neural network model similar to the one in an article by nVidia. http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf.  But having worked on it for close to a week and not finding a good solution, I switched to a CNN model described in another paper by Vivek Yadav, in https://chatbotslife.com/using-augmentation-to-mimic-human-driving-496b569760a9#.1g3gw99kj... This model immediately started yielding the results I was struggling to get initially.  This model uses a set of filters and convolutional networks, maxpooling, drop of layers and finally fully connected laters. The first layer is 3 1X1 filter, which has the effect of transforming the color space of the images. Using 3 1X1 filters allows the model to choose its best color space. This is followed by 3 convolutional blocks each comprised of 32, 64 and 128 filters of size 3X3. These convolution layers were followed by 3 fully connected layers. All the convolution blocks and the 2 following fully connected layers had exponential relu (ELU) as activation function. 
 
 In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I used 25% of the samples as validation data. To address overfitting, I used several image processing techniques including, flipping, image augmentation by varying the brightness randomly, shifting the images to the left and right by a few pixels, using alterante camera images with modified steering angle etc..
 
@@ -88,35 +88,39 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 ####2. Final Model Architecture
 
-The final model architecture (model.py lines 143-168) consisted of a convolution neural network with the following layers and layer sizes ...
+The final model architecture (model.py lines 143-168) consisted of a convolution neural network with the following layers and layer sizes.
 
-Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
-![alt text][image1]
+    - Normalization Layer using Lamda function.     
+    - 3 Sets of CNN layers with Maxpooling and dropout to prevent overfitting 
+      - Set 1:
+        Convolution - 32x3x3 followed by ELU activation
+        Convolution - 32x3x3 followed by ELU activation
+        Maxpooling - 2x2 filter
+        Dropout - 50%
+      
+      - Set 2:
+        Convolution - 64x3x3 followed by ELU activation
+        Convolution - 64x3x3 followed by ELU activation
+        Maxpooling - 2x2 filter
+        Dropout - 50%
+      
+      - Set 3:
+        Convolution - 128x3x3 followed by ELU activation
+        Convolution - 128x3x3 followed by ELU activation
+        Maxpooling - 2x2 filter
+        Dropout - 50%
+      
+      - Fully Connected Layers
+        FC 512 with ELU activation
+        FC 64 with ELU activation
+        FC 16 with ELU activation
+        FC 1 with ELU activation (Output)
+      
 ####3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+For a large part of the work, I used the Udacity provided data to train and model the network. This is due to the difficulty I faced in controlling the car with a normal mouse. Later, to capture good driving behavior, I first recorded two laps on track one using center lane driving. I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to recover from edges without falling off. After the collection process, I had about 11540 number of data points. I would have collected more to get a much smoother drive, but for the difficulty in controlling the car with the mouse, adjusting the speed and recording at the same time on my Macbook Pro. 
 
-![alt text][image2]
+I finally randomly shuffled the data set and put 25% of the data into a validation set. 
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
-
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
-
-Then I repeated this process on track two in order to get more data points.
-
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
-
-![alt text][image6]
-![alt text][image7]
-
-Etc ....
-
-After the collection process, I had X number of data points. I then preprocessed this data by ...
-
-
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
-
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5 as more number of epochs did not yield any better results. I used an adam optimizer with a learning rate of 0.0001.
