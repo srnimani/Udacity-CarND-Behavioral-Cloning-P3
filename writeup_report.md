@@ -111,11 +111,11 @@ The final model architecture (model.py lines 143-168) consisted of a convolution
         Maxpooling - 2x2 filter
         Dropout - 50%
       
-      - Fully Connected Layers
-        FC 512 with ELU activation
-        FC 64 with ELU activation
-        FC 16 with ELU activation
-        FC 1 with ELU activation (Output)
+    - Fully Connected Layers
+       FC 512 with ELU activation
+       FC 64 with ELU activation
+       FC 16 with ELU activation
+       FC 1 with ELU activation (Output)
       
 ####3. Creation of the Training Set & Training Process
 
