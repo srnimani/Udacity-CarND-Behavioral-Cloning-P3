@@ -4,7 +4,7 @@
 
 Overview
 ---
-This repository contains starting files for P3, Behavioral Cloning.
+This repository contains files for Udacity - Behavioral Cloning P3 project work.
 
 Initial Committ on 3rd Feb 2016. Modified files loaded on 11th Feb 2017
 
