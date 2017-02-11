@@ -125,4 +125,4 @@ I finally randomly shuffled the data set and put 25% of the data into a validati
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5 as more number of epochs did not yield any better results. I used an adam optimizer with a learning rate of 0.0001.
 
-I had recorded the video and submited them as well, but the process of recording had a big impact on the simulator performance (too much swaggering altho' the car did not go off the track) due to the additional demand on the processing capability and the memory availbility of my machine. Running the simulator w/o recording looks much better. 
+I had recorded the video to submit, but the process of recording had a big impact on the simulator performance (too much swaggering altho' the car did not go off the track) due to the additional demand on the processing and the memory needs on my machine. Running the simulator w/o recording looks much better. 
