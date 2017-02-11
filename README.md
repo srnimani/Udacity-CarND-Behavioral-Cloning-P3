@@ -18,7 +18,7 @@ Originally used NVidia CNN model, as described in http://images.nvidia.com/conte
 
 which did not work too well
 
-Used the default data from Udacity to train most of the model and once it started working well for both original tracks added my own data to smoothen straightline drives (it stll swaggers a bit). Used low resolution, fast laps and some recovery data around the edges as well.
+Used the default data from Udacity to train most of the model and once it started working well for both original tracks added my own data to smoothen straightline drives (it still swaggers a bit). Used low resolution, fast laps and some recovery data around the edges as well.
 
 Modified original Drive.py to control the speed and steering control to smoothen the drive.. The model worked well for both tracks of the old simulator, the first track was working for more than 30 mts till I aborted.
 
