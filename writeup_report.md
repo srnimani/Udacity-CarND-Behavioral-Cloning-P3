@@ -127,4 +127,6 @@ I used this training data for training the model. The validation set helped dete
 
 I had recorded the video to submit, but the process of recording had a big impact on the simulator performance (too much swaggering altho' the car did not go off the track) due to the additional demand on the processing and the memory needs on my machine. Running the simulator w/o recording looks much better. 
 
-Surprisingly, the car behaved very well on track 2 (much better than track 1) and stayed on course all the time, althogh I did not capture any simulator image for this track for training!! There were a couple of slopes were the car struggled and started reversing, and so added fail-safe code in drive.py to increase the speed under such conditions. The car behaved very well after that. Have added the video for the same.
+Surprisingly, the car behaved very well on track 2 (much better than track 1) and stayed on course all the time, althogh I did not capture any simulator image for this track for training!! There were a couple of slopes were the car struggled and started reversing, and so added fail-safe code in drive.py to increase the speed under such conditions. The car behaved very well after that. 
+
+The videos are too big (> 500MB) to add to Git repository.
