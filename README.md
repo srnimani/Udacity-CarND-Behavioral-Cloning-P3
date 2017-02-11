@@ -50,7 +50,7 @@ python drive.py model.json
 
 The above command will load the trained model and use the model to make predictions on individual images in real-time and send the predicted angle back to the server via a websocket connection.
 
-### `model.jon`
+### `model.json`
 
 model.json is the model used by Drive.py to drive the car around the track.. Created by the Jupyter note book, 'Behavioral-cloning-P3-Submit.ipynb' after training using the images. 
 
