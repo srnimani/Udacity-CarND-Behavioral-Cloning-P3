@@ -75,18 +75,9 @@ def telemetry(sid, data):
     if steering_history_index >= steering_history_array_length:
         steering_history_index = 0
 
-    # Control speed based on steering angle
+    # Control speed based on steering angle, based on reviewer's suggestion.
     
-    if new_steering_angle >  0.15:
-        throttle = 0.15
-        
-    elif new_steering_angle < - 0.15:
-        throttle = 0.15
-        
-    elif 1:
-        throttle = 0.30
-    
-
+    throttle = max(0.1, -0.15/0.05 * abs(steering_angle) + 0.35)  
         
     # Code for failsave lest car stalls on slopes/ difficult conditions:
     
