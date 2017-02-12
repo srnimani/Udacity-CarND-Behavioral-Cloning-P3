@@ -20,7 +20,11 @@ which did not work too well
 
 Used the default data from Udacity to train most of the model and once it started working well for both original tracks added my own data to smoothen straightline drives (it still swaggers a bit). Added a few laps of of straightline drives at fast pace, and then added a few recovery data around the edges and corners. Additional data included 3500 images. Could have added a lot more data if I had better control over the mouse. Did not train on track 2 at all.  
 
-Modified original Drive.py to control the speed and steering control to smoothen the drive.. The model worked well for both tracks of the old simulator, the first track was working for more than 30 mts till I aborted.
+Sample Images:
+
+Driving Straight:
+
+
 
 Latest simulator data track 2 does not work, I guess due to lane lines and very difficult terrian. Needs some more work.
 
