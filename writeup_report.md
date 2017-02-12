@@ -129,4 +129,22 @@ I had recorded the video to submit, but the process of recording had a big impac
 
 Surprisingly, the car behaved very well on track 2 (much better than track 1) and stayed on course all the time, althogh I did not capture any simulator image for this track for training!! There were a couple of slopes were the car struggled and started reversing, and so added fail-safe code in drive.py to increase the speed under such conditions. The car behaved very well after that. 
 
-The videos are too big (> 900MB each) to add to Git repository.
+Uploaded Youtube video with the same drive.py loaded earlier..
+
+https://youtu.be/iE6JpVpRgVo
+
+The car swerves, but stays within the track.. I noticed that the serving is more due to recording..  w/o recording it looks stable..
+
+Track 2, video loaded here..
+
+https://youtu.be/DG6a2lVabOA
+
+After modifying the Drive.Py as per the reviewe comments (modulating the speed with the steering angle), the driving was much smoother albeit slower.. Track 1 recording here:
+
+https://youtu.be/4daEsKpvwsc
+
+All these videos were recorded @ 640 x 480 resolution and fastest speed settings. Machine: Macbook Pro Model 2015 with 8 GB of memory.
+
+NOTE:
+
+I have tried the simulator for more than an hour without the car going off the track. But running the simulator in the background and doing any foreground work (like editing a spreadsheet or browsing) even for a short while, messes up the simulator/ program and the car goes off track. So unless you have enough processing capability or memory, no multiprocessing please.
