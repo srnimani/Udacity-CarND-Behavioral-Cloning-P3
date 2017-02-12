@@ -38,8 +38,13 @@ https://cloud.githubusercontent.com/assets/10118232/22862329/7fe3c424-f152-11e6-
 
 https://cloud.githubusercontent.com/assets/10118232/22862345/ae0a60e2-f152-11e6-81da-320782e1e4e7.jpg
 
-Recovery recording:
+A few sample of recovery recording:
 
+https://youtu.be/2dOlrs80_YU
+
+https://youtu.be/osb-lKCwYUA
+
+https://youtu.be/vVuPe2Tr0TI
 
 
 Latest simulator data track 2 does not work, I guess due to lane lines and very difficult terrian. Needs some more work.
