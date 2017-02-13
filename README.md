@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 
 
 
-## Summary of work done (more details in work_report.md)
+## Summary of work done (more details in writeup_report.md)
 
 Model inspiration and some ideas came from the work done by Vivek Yadav and Matt Harvey..
 
