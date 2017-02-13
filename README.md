@@ -8,6 +8,19 @@ This repository contains files for Udacity - Behavioral Cloning P3 project work.
 
 Initial Committ on 3rd Feb 2016. Modified files loaded on 11th Feb 2017
 
+
+The Project
+---
+The goals / steps of this project are the following:
+* Use the simulator to collect data of good driving behavior 
+* Design, train and validate a model that predicts a steering angle from image data
+* Use the model to drive the vehicle autonomously around the first track in the simulator. The vehicle should remain on the road for an entire loop around the track.
+* Summarize the results with a written report
+
+
+
+## Summary of work done (more details in work_report.md)
+
 Model inspiration and some ideas came from the work done by Vivek Yadav and Matt Harvey..
 
 https://chatbotslife.com/using-augmentation-to-mimic-human-driving-496b569760a9#.2oj0h0bon
@@ -49,16 +62,7 @@ https://youtu.be/vVuPe2Tr0TI
 
 Latest simulator data track 2 does not work, I guess due to lane lines and very difficult terrian. Needs some more work.
 
-Used Jupyter Notebook
-
-The Project
----
-The goals / steps of this project are the following:
-* Use the simulator to collect data of good driving behavior 
-* Design, train and validate a model that predicts a steering angle from image data
-* Use the model to drive the vehicle autonomously around the first track in the simulator. The vehicle should remain on the road for an entire loop around the track.
-* Summarize the results with a written report
-
+Used Jupyter Notebook during the development.
 
 ## Details About Files In This Directory
 
